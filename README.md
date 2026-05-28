@@ -1,4 +1,4 @@
-﻿# TopFor
+# TopFor
 
 AMBER parameter generation for **noncanonical amino acids (ncAAs)**.
 
@@ -15,23 +15,9 @@ residue.mol2  ->  residue_capped.mol2  ->  RES.mol2 (with charges)
                                       ->  RES.lib
 ```
 
-<<<<<<< HEAD
 It also writes a single consolidated `residue_meta.json` per residue
 documenting every decision the pipeline made (head/tail atoms, OXT
 preservation, net charge source, applied caps, etc.).
-=======
-- **Single-file mode**: Process one MOL2 file at a time  
-- **Batch mode**: Process multiple MOL2 files via a text file list  
-- **Automated pipeline**: Capping, Antechamber, TLeap, PREPGEN, and PARMCHK2 steps are chained automatically  
-
----
-
-## Requirements
-
-- **Operating System**: Linux, macOS, or Windows with WSL/Git Bash  
-- **AMBER Tools**: `antechamber`, `tleap`, `prepgen`, `parmchk2` installed and in your PATH  
-- **Conda**: Miniforge or Anaconda installed  
->>>>>>> 357ea38dd1f562477bab9259c860e22a27b12f08
 
 ---
 
@@ -65,7 +51,6 @@ see below):
 topfor -i MVA.mol2
 ```
 
-<<<<<<< HEAD
 ### Several residues at once (shell glob)
 
 `-i` accepts multiple files, so the usual `*.mol2` shell glob works:
@@ -75,12 +60,6 @@ topfor -i *.mol2
 ```
 
 ### Free amino acid (e.g. for a fragment that already has OXT and a free amine)
-=======
-### Batch mode via text file list
-
-1. Create a text file (e.g., `list.txt`) with one `.mol2` path per line  
-2. Run:
->>>>>>> 357ea38dd1f562477bab9259c860e22a27b12f08
 
 ```bash
 topfor -i MVA.mol2 --terminal both
@@ -189,7 +168,6 @@ topfor -i MVA.mol2 --map examples/residue_map.json
 For each input residue, a folder is created under `--out/-o` (default: current
 directory):
 
-<<<<<<< HEAD
 ```
 out/
 ├── MVA/
@@ -208,33 +186,6 @@ out/
 │   └── BAD/                    # full working folder of any failed residue
 └── successful_residues.txt
 └── failed_residues.txt
-=======
----
-
-## Output
-
-For each input file `NAME.mol2`, the tool creates a directory `NAME/` containing:
-
-- `NAME.ac`, `NAME.mol2` → Charged structures  
-- `NAME.lib` → TLeap library  
-- `NAME.prepin` → PREPGEN input  
-- `NAME.mc` → MC file  
-- `NAME.frcmod`, `NAME_GAFF.frcmod`, `NAME_FF14SB.frcmod` → Parameter modification files  
-
----
-
-## Examples
-
-```bash
-# Single file
-topfor -i AIB.mol2
-
-
-# Batch via list
-echo "AIB.mol2" > list.txt
-echo "FGA.mol2" >> list.txt
-topfor -b list.txt
->>>>>>> 357ea38dd1f562477bab9259c860e22a27b12f08
 ```
 
 `successful_residues.txt` and `failed_residues.txt` each contain one residue
@@ -262,7 +213,6 @@ OXT and must **not** be NME-capped, adding NME on top of OXT produces a
 geometrically broken topology, and removing OXT to attach NME destroys
 chemistry that the parameter set is supposed to represent.
 
-<<<<<<< HEAD
 In peptide mode (`-p`), the splitter detects this automatically and tells
 the capping step to preserve OXT. In single-residue mode (`-i`), the user
 must say so explicitly with `--terminal c` (C-terminal) or `--terminal both`
@@ -298,11 +248,3 @@ topfor/
 ├── README.md   
 └── topfor
 ```
-=======
-- **CRLF errors**  
-  Convert script to LF line endings:
-  ```bash
-  dos2unix topfor
-  ```
-  Or in VS Code: click the CRLF indicator (bottom-right) → select **LF**
->>>>>>> 357ea38dd1f562477bab9259c860e22a27b12f08
