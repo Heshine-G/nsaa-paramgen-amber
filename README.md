@@ -242,8 +242,8 @@ topfor/
 │   ├── resp_workflow.py           xTB + ORCA + Multiwfn RESP backend
 │   └── mol2_utils.py              MOL2 parsing, validation, helpers                      
 ├── test/ 
-│   ├── MVA.mol2                      Working example of N-methylated Valine
-│   └── MVA/                          Parameters and topology folder  
+│   ├── MVA.mol2                   Working example of N-methylated Valine
+│   └── MVA/                       Parameters and topology folder  
 ├── main.py
 ├── README.md   
 └── topfor
