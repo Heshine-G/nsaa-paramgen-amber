@@ -48,6 +48,21 @@ see below):
 ---
 ## Quick start
 
+### Add `topfor` to PATH
+
+Instead of running:
+
+```bash
+python main.py -i MVA.mol2
+```
+make the launcher executable and add the TopFor directory to your `PATH`:
+
+```
+chmod +x topfor
+export PATH="/path/to/topfor:$PATH"
+```
+Add the `export` line to `~/.bashrc` to make it permanent.
+
 ### Single residue
 
 ```bash
