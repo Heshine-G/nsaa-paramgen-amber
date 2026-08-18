@@ -135,6 +135,12 @@ topfor -i MVA.mol2 -bb ff19SB -sc gaff2   # default
 topfor -i MVA.mol2 -bb ff14SB -sc gaff
 ```
 
+### Specifying the residue net charge
+
+```
+topfor -i MVA.mol2 -nc 0
+```
+
 ### Residue map
 
 Hand-curated overrides for tricky residues live in a JSON file passed via
