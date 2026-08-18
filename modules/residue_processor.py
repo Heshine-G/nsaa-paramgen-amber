@@ -76,7 +76,7 @@ class NonStandardAminoAcidProcessor:
     def __init__(
         self,
         input_file: str,
-        charge_model: str = "abcg2",
+        charge_model: str = "bcc",
         residue_map: Optional[dict] = None,
         default_net_charge: int = 0,
         net_charge_override: Optional[int] = None,

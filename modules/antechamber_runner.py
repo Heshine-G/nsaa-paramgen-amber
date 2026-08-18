@@ -103,7 +103,7 @@ def run_antechamber_for_all(
     mol2_files: List[str],
     backbone: str = "ff19SB",
     sidechain: str = "gaff2",
-    charge: str = "abcg2",
+    charge: str = "bcc",
     generate_gmx: bool = False,
 ) -> Dict[str, List]:
     """

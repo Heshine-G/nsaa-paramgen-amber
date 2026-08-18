@@ -107,8 +107,8 @@ topfor -b residues/ "extra/*.mol2"     # multiple args concatenated
 ### Choosing a charge model
 
 ```bash
-topfor -i MVA.mol2 -c abcg2     # default
-topfor -i MVA.mol2 -c bcc
+topfor -i MVA.mol2 -c bcc     # default
+topfor -i MVA.mol2 -c abcg2
 topfor -i MVA.mol2 -c gas
 topfor -i MVA.mol2 -c resp      # needs xTB + ORCA + Multiwfn
 ```

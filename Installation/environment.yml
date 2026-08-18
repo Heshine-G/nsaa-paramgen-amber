@@ -22,8 +22,8 @@
 name: topfor
 
 channels:
-  - conda-forge        # primary source for all packages below
-  - defaults           # fallback only; lower priority
+  - conda-forge        # all TopFor packages below are sourced here
+  - nodefaults          # avoid mixing defaults/conda-forge binary stacks
 
 dependencies:
 

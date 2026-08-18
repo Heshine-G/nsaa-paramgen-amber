@@ -87,7 +87,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--sidechain", "-sc",
                         choices=["gaff", "gaff2"], default="gaff2")
     parser.add_argument("--charge", "-c",
-                        choices=["gas", "bcc", "resp", "abcg2"], default="abcg2")
+                        choices=["gas", "bcc", "resp", "abcg2"], default="bcc")
     parser.add_argument("--gmx", "-gmx", action="store_true",
                         help="Also generate GROMACS .top/.gro for each "
                              "residue (and for the whole peptide in -p mode). "
