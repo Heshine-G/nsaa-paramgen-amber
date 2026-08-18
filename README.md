@@ -57,7 +57,7 @@ python main.py -i MVA.mol2
 ```
 make the launcher executable and add the TopFor directory to your `PATH`:
 
-```
+```bash
 chmod +x topfor
 export PATH="/path/to/topfor:$PATH"
 ```
@@ -137,7 +137,7 @@ topfor -i MVA.mol2 -bb ff14SB -sc gaff
 
 ### Specifying the residue net charge
 
-```
+```bash
 topfor -i MVA.mol2 -nc 0
 ```
 
